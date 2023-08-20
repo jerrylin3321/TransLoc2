@@ -1,5 +1,25 @@
-# TransLoc2
+# Bus Arrival Time Estimator
 
-Say you want to get from a location on West Campus to a location on East Campus. That's gonna require the bus. If you want a precise ETA so you know when to leave, you'll have to use Google Maps. But Google Maps doesn't have precise bus timings—it uses the "every 5 minutes" schedule that bus drivers never follow. This service combines the ETA of the walking segments plus data direct from the TransLoc app for the bus segment to give a more accurate prediction of when you can expect to reach your destination.
+The Bus Arrival Time Estimator is a Python script that calculates the estimated time of arrival (ETA) for a bus given a departure location and an arrival location. The script leverages the Google Maps API for transit directions and integrates with the TransLoc API for real-time bus arrival information.
 
-It's very rough and all, I'm thinking of building a web service for it in the future.
+## Features
+
+- **Calculate Arrival Time**: Computes the estimated arrival time for the bus including waiting time and travel time.
+- **Flexible Input**: Takes departure and arrival locations as input and calculates the most suitable bus route.
+- **Real-Time Data Integration**: Utilizes real-time data from the TransLoc API for accurate bus arrival predictions.
+
+## Dependencies
+
+- `requests`: For making HTTP requests to the TransLoc API.
+- `googlemaps`: For fetching transit directions using the Google Maps API.
+- `datetime`: For handling date and time calculations.
+- `dateutil.parser`: For parsing date strings.
+
+## Usage
+
+1. **Set Up API Keys**: You'll need to set up API keys for both Google Maps and TransLoc APIs and replace them in the script where `API_KEY_HERE` is mentioned.
+
+2. **Install Required Libraries**:
+
+   ```bash
+   pip install requests googlemaps python-dateutil
